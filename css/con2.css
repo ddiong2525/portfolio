@@ -133,6 +133,10 @@
   line-height: 130%;
 }
 
+#con2 .articles article .article_inner .bottom .bt_right .txt div span {
+  font-weight: 500;
+}
+
 #con2 .articles article .article_inner .bottom .bt_right .bt_btn {
   height: 140px;
   width: 100%;
