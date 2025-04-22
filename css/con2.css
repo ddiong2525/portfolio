@@ -1,0 +1,272 @@
+#con2 {
+  position: relative;
+  background: #000;
+  padding-bottom: 150px;
+  /* padding-top: 150px; */
+  /* 을 설정하면 contact이 짤려요.. */
+}
+
+#con2 .articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 가로축 가운데 정렬 */
+}
+
+#con2 .articles article {
+  width: 98%;
+  height: 100vh;
+  background: #000;
+  margin-bottom: 150px;
+  border: 1px solid #fff;
+  /* 영역확인 */
+  transform: scale(0.8);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+
+#con2 .articles article .article_inner {
+  height: 100%;
+  width: 98%;
+  background: #fff;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  font-family: var(--SB_B);
+}
+
+#con2 .articles article .article_inner .top {
+  width: 100%;
+  height: 270px;
+  border-bottom: 1px solid #000;
+}
+
+#con2 .articles article .article_inner .top .title {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+#con2 .articles article .article_inner .top .txtAniBox2 {
+  font-size: 180px;
+  width: 100%;
+  height: 200px;
+  margin-top: 14px;
+}
+
+.txtAniBox2 .simply-scroll .simply-scroll-clip {
+  display: flex;
+  overflow: hidden;
+}
+
+.txtAniBox2 ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  /* 줄바꿈 일어나지 않게 만듦 */
+  transform-origin: left top;
+}
+
+.txtAniBox2 ul li {
+  margin-right: 50px;
+  margin-top: 10px;
+}
+
+#con2 .articles article .article_inner .bottom {
+  width: 100%;
+  height: calc(100% - 270px);
+  display: flex;
+}
+
+#con2 .articles article .article_inner .bottom .bt_left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #000;
+}
+
+#con2 .articles article .article_inner .bottom .bt_right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#con2 .articles article .article_inner .bottom .bt_right .txt {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  justify-content: center;
+  padding-left: 60px;
+}
+
+#con2 .articles article .article_inner .bottom .bt_right .txt .tt h3 {
+  font-size: 52px;
+  margin-bottom: 18px;
+  font-family: var(--SB_M);
+}
+
+#con2 .articles article .article_inner .bottom .bt_right .txt .tt h4 {
+  font-family: var(--NSK);
+  font-size: 40px;
+  font-weight: 400;
+}
+
+#con2 .articles article .article_inner .bottom .bt_right .txt div {
+  font-family: var(--NSK);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 130%;
+}
+
+#con2 .articles article .article_inner .bottom .bt_right .bt_btn {
+  height: 140px;
+  width: 100%;
+  border-top: 1px solid #000;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+  align-items: center;
+  font-family: var(--SB_L);
+}
+
+.button-like-div {
+  width: 300px;
+  height: 60px;
+  background-color: #000;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(19, 19, 19, 0.40);
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  border-radius: 0px 16px 0px 16px;
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.button-like-div:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transform: translateY(2px);
+}
+
+.button-like-div a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.button-like-div:active {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  transform: translateY(4px);
+}
+
+.arrow-container {
+  position: absolute;
+  right: 6px;
+  top: 23px;
+  width: 35px;
+  height: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.arrow {
+  opacity: 0;
+  transform: translateX(0);
+  /* 호버 상태에서만 애니메이션 적용 */
+  animation: none;
+}
+
+.button-like-div:hover .arrow.one {
+  animation: wave 1.2s infinite;
+}
+
+.button-like-div:hover .arrow.two {
+  animation: wave 1.2s infinite;
+  animation-delay: 0.2s;
+}
+
+.button-like-div:hover .arrow.three {
+  animation: wave 1.2s infinite;
+  animation-delay: 0.4s;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  30% {
+    transform: translateX(1px);
+    opacity: 0.2;
+  }
+
+  60% {
+    transform: translateX(2px);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(3px);
+    opacity: 0;
+  }
+}
+
+#con2 .articles article.dark-mode-active .article_inner {
+  background-color: #000;
+  color: #fff;
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+#con2 .articles article.dark-mode-active .article_inner .bottom .bt_left {
+  border-right: 1px solid #fff;
+}
+
+#con2 .articles article.dark-mode-active .bt_right .txt h3,
+#con2 .articles article.dark-mode-active .bt_right .txt h4,
+#con2 .articles article.dark-mode-active .bt_right .txt div {
+  color: #fff;
+}
+
+#con2 .articles article.dark-mode-active .article_inner .bottom .bt_right .bt_btn {
+  border-top: 1px solid #fff;
+}
+
+#con2 .articles article.dark-mode-active .article_inner .top {
+  border-bottom: 1px solid #fff;
+}
+
+#con2 .articles article.dark-mode-active .article_inner .top .title {
+  border-bottom: 1px solid #fff;
+}
+
+#con2 .articles article.dark-mode-active .article_inner .bottom .bt_btn .button-like-div {
+  background-color: #fff;
+  color: #000;
+}
+
+#con2 .articles article.dark-mode-active .article_inner {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+}

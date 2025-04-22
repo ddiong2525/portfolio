@@ -1,0 +1,175 @@
+#con3 {
+    position: relative;
+    background: #fff;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+    font-family: "Holtwood One SC", serif;
+}
+
+#con3 .articles {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#con3 .articles article{
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    border-radius: 30px;
+    margin-top: 150px;
+    transform: scale(0.8);
+    opacity: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#con3 .articles article .menu {
+    width: 680px;
+    height: 797px;
+    background: url(../img/menu.png) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    padding-top: 67px;
+    position: absolute;
+    left: 60px;
+    bottom: -80px;
+    transform: rotate(-8deg);
+}
+
+#con3 svg {
+  position: absolute;
+  z-index: 5;
+  left: 203px;
+  top: 405px;
+}
+
+.path {
+  fill: none !important;              /* 내부 채우기 제거 */
+  stroke: black;
+  stroke-width: 2;
+  stroke-opacity: 0;
+  transition: stroke-dashoffset 2s ease, stroke-opacity 0.5s ease;
+}
+
+
+.menu h2 {
+    font-size: 55px;
+}
+
+.link-table {
+    width: 545px;
+    height: 300px;
+    border-top: 1px solid #000;
+    margin-top: 20px;
+    font-size: 45px;
+  }
+  
+  .link-table td {
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    vertical-align: middle;
+  }
+
+  .link-table td:first-child {
+    width: 425px;
+    padding: 10px 15px;
+  }
+
+  .link-table td:last-child {
+    border-right: 0;
+  }
+  
+  .link-table a {
+    width: 120px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 30px;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  .link-table a:hover img {
+    left: 150%; /* 오른쪽 바깥으로 밀기 */
+    opacity: 0;
+  }
+  
+  .link-table a:hover .more-text {
+    background: #000;
+
+    left: 50%; /* 가운데로 이동 */
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  .link-table a img {
+    width: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+  }
+
+  .link-table a .more-text {
+    position: absolute;
+    top: 50%;
+    left: -100%; /* 왼쪽 바깥에 숨겨놓기 */
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    line-height: 100px;
+  }
+
+  .img1 video, .img2 video, .img3 video {
+    /* opacity: 0; */
+    pointer-events: none;
+    transition:.6s;
+    position: absolute; /* 필요한 경우 위치 조정 */
+    z-index: -100;
+    /* left: -100%; *//* 이거 바꿔서 조정... */
+  }
+
+  .default_v {
+    top: 20%;
+    left: 50px;
+    opacity: 0;
+    transform: rotate(0);
+  }
+
+  .move_v {
+    top: 20%;
+    opacity: 1;
+    left: 850px;
+    transform: rotate(10.32deg);
+  }
+
+  .img1 img, .img2 img, .img3 img {
+    pointer-events: none;
+    transition: all 0.8s ease;
+    position: absolute; /* 필요한 경우 위치 조정 */
+    z-index: -80;
+    width: 350px;
+  }
+
+  .default_i {
+    top: 20%;
+    left: 50px;
+    opacity: 0;
+    transform: rotate(0);
+  }
+
+  .move_i {
+    top: 20%;
+    opacity: 1;
+    left: 1100px;
+    transform: rotate(-19.276deg);
+  }

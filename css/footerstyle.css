@@ -1,0 +1,99 @@
+:root {
+  --duration: 1s;
+  --easing: cubic-bezier(.2, 0, .3, 1);
+}
+
+
+footer {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  font-family: var(--SB_M);
+}
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  font-size: 100px;
+}
+#sns {
+  position: absolute;
+  z-index: 10;
+  bottom: 30px;
+  right: 0;
+  height: 400px;
+  width: 1200px;
+  color: #fff;
+}
+
+
+.contact {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  width: 100%;
+  font-size: 100px;
+}
+
+
+.contact > .txt {
+  line-height: 1;
+  padding: 20px;
+}
+.contact > .txt h2 {
+  margin: 20px;
+  font-weight: 300;
+}
+.contact > .txt span {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.contact .txt div {
+  overflow: hidden;
+  text-align: right;
+}
+
+.contact .txt div:nth-child(2) span {
+  font-size: 80px;
+}
+
+.contact .txt div:nth-child(3) span {
+  font-size: 80px;
+  font-family: var(--SB_L);
+}
+
+
+
+.contact .txt span {
+  transform: translateY(-100%);
+  transition: transform var(--duration) var(--easing);
+}
+.contact .txt div:nth-child(2) span {
+  transform: translateY(100%);
+}
+
+.contact[data-active] {
+  z-index: 10;
+}
+
+.contact[data-active] .txt span {
+  transform: none !important;
+}
+
+.contact[data-active] + .contact .txt span {
+  visibility: hidden;
+  transform: translateY(100%);
+}
+
+.contact[data-active] + .contact .txt div:nth-child(2) span {
+  transform: translateY(-100%);
+}

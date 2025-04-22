@@ -1,0 +1,360 @@
+.con1_wrap {
+  width: 100%;
+  overflow: hidden;
+  font-family: var(--KBO);
+}
+
+section {
+  width: 100%;
+  padding-top: 100px;
+}
+
+.full {
+  height: 100vh;
+}
+
+.horizontal {
+  display: flex;
+  position: relative;
+  padding-top: 0;
+}
+
+.horizontal h2 {
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+
+#con1 {
+  position: relative;
+  width: 7500px;
+  /* width: 200vw; */
+  background: #fff;
+  gap: 105px;
+}
+
+.hItem {
+  width: 700px;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 10px solid red; */
+  flex-shrink: 0;
+}
+
+.hItem .imgWrap {
+  width: 544px;
+  height: 678px;
+  /* margin-right: 105px; */
+  padding-bottom: 18%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hItem .imgWrap .box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s;
+}
+
+.box:has(.inner) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgWrap .box .inner {
+  width: 500px;
+  height: 630px;
+  background: #fff;
+}
+
+.iw1 .box {
+  background: #000;
+  color: #fff;
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 41px;
+  padding-top: 64px;
+  gap: 30px;
+}
+
+.iw1 .box>img {
+  width: 225px;
+  height: 267px;
+  position: relative;
+  z-index: 2;
+}
+
+.iw1 .box .bg {
+  width: 225px;
+  height: 267px;
+  background: #7c7c7c;
+  position: absolute;
+  left: 60px;
+  top: 50px;
+  z-index: 0;
+}
+
+.iw1 .box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.iw1 .box ul li {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.iw1 .box ul li:first-child {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.iw2 .box {
+  background: url(../img/bg.png) no-repeat center/cover;
+}
+
+.iw2 .box .text {
+  margin-left: 30px;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.iw2 .box .text h4 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.iw2 .box .text span {
+  font-size: 23px;
+  line-height: 150%;
+  font-weight: 300;
+}
+
+.iw3 .box {
+  background: url(../img/bg2.png) no-repeat center/cover;
+}
+
+.iw3 .box .iw3_contents {
+  width: 100%;
+  height: 600px;
+  /* background: #ccc; */
+  position: relative;
+}
+
+.iw3 .box .iw3_contents h4 {
+  font-size: 29px;
+  position: absolute;
+  z-index: 2;
+}
+
+.iw3 .box .iw3_contents h4:first-child {
+  text-align: right;
+  right: 236px;
+  top: 60px;
+  line-height: 120%;
+}
+
+.iw3 .box .iw3_contents h4 span {
+  color: #fff;
+}
+
+.iw3 .box .iw3_contents .imgs{
+  position: absolute;
+  right: 36px;
+  top: 60px;
+  width: 225px;
+  height: 227px;
+  z-index: 1;
+}
+.iw3 .box .iw3_contents .imgs img:nth-child(2) {
+  position: absolute;
+  right: 0;
+  bottom:0;
+}
+
+.iw3 .box .iw3_contents .sub {
+  text-align: right;
+  font-weight: 300;
+  color: #8b8b8b;
+  position: absolute;
+  z-index: 1;
+  left: 68px;
+  top: 135px;
+  line-height: 110%;
+  font-size: 14px;
+}
+
+.iw3 .box .iw3_contents .bottom1 {
+  left: 51px;
+  bottom: 222px;
+}
+
+.iw3 .box .iw3_contents .bottom2 {
+  left: 70px;
+  bottom: 188px;
+}
+
+.iw3 .box .iw3_contents .bottom3 {
+  left: 51px;
+  bottom: 156px;
+  font-size: 28px;
+}
+
+.iw4 .box {
+  background: url(../img/bg2.png) no-repeat center/cover;
+}
+
+.iw4 .box h4 {
+  position: absolute;
+  left: 55px;
+  bottom: 84px;
+  font-size: 28px;
+  line-height: 120%;
+}
+
+.iw4 .box>img {
+  position: absolute;
+  right: 30px;
+  bottom: 150px;
+  /* 임시임 */
+}
+
+.iw4 .box .imgs {
+  width: 431px;
+  height: 380px;
+  position: relative;
+  z-index: 2;
+  margin-left: 54px;
+  margin-top: 40px;
+}
+
+.iw4 .box .imgs img {
+  position: absolute;
+}
+
+.iw4 .box .imgs img:nth-child(2) {
+  right: 0;
+  bottom: 0;
+}
+
+.iw5 .box {
+  background: url(../img/bg.png) no-repeat center/cover;
+}
+
+.iw5 .box .iw5_contents {
+  width: 440px;
+  height: 435px;
+  margin: 0 auto;
+  margin-top: 30px;
+  position: relative;
+}
+
+.iw5 .box .iw5_contents img {
+  position: absolute;
+}
+
+.iw5 .box .iw5_contents .baking {
+  left: 0;
+  top: 0;
+}
+
+.iw5 .box .iw5_contents .Photograph {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.iw5 .box .iw5_contents .Collecting {
+  left: 0;
+  bottom: 0;
+}
+
+.iw5 .box .iw5_contents div {
+  position: absolute;
+  font-size: 35px;
+}
+
+.iw5 .box .iw5_contents .bk {
+  left: 168px;
+  top: 23px;
+  transform: rotate(12.719deg);
+}
+
+.iw5 .box .iw5_contents .pho {
+  left: 45px;
+  top: 200px;
+  transform: rotate(-7.244deg);
+}
+
+.iw5 .box .iw5_contents .plus {
+  top: 240px;
+  left: 110px;
+  font-size: 23px;
+}
+
+.iw5 .box .iw5_contents .col {
+  bottom: 29px;
+  right: 96px;
+  transform: rotate(12.719deg);
+}
+
+.iw5 .box .iw5_contents span {
+  color: #fff;
+}
+
+.hItem h3 {
+  font-size: 40px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+/* 아이콘 바운스 */
+.canvas_wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* 필요에 따라 */
+}
+
+canvas#oo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* 혹은 고정 크기 */
+  height: 100%;
+  z-index: 0;
+  /* h3보다 아래로 보이게 할 수도 있음 */
+}
+
+
+/* 궤도 따라 도는 거 */
+canvas#orbitCanvas {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
