@@ -95,11 +95,11 @@ section {
 
 .iw1 .box .bg {
   width: 225px;
-  height: 267px;
-  background: #7c7c7c;
+  height: 225px;
+  background: #dbdbdb;
   position: absolute;
   left: 60px;
-  top: 50px;
+  top: 65px;
   z-index: 0;
 }
 
