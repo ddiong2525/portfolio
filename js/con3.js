@@ -1,3 +1,4 @@
+
 $('#con3 article').hover(function () {
     $('.custom_cursor').addClass('blue');
   }, function () {

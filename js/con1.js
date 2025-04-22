@@ -27,7 +27,7 @@ const scrollTween = gsap.to(sections, {
     scrub: 1,
     anticipatePin: 1,
     invalidateOnRefresh: true,
-    markers: true // 디버그용, 완성되면 지워도 됨
+    markers: false // 디버그용, 완성되면 지워도 됨
   }
 });
 

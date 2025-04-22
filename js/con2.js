@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
           end: 'top 30%',
           scrub: true,
           scroller: scrollContainer,
-          markers: true
+          markers: false
         }
       }
     );
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         video.pause();
         video.currentTime = 0;
       },
-      markers: true // 🔍 확인용 (개발 끝나면 지워도 됨)
+      markers: false // 🔍 확인용 (개발 끝나면 지워도 됨)
     });
   }
 
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
           video2.pause();
           video2.currentTime = 0;
         },
-        markers: true // 🔍 확인용 (개발 끝나면 지워도 됨)
+        markers: false // 🔍 확인용 (개발 끝나면 지워도 됨)
       });
     }
 
@@ -120,7 +120,8 @@ document.addEventListener('DOMContentLoaded', () => {
         video3.pause();
         video3.currentTime = 0;
       },
-      markers: true // 🔍 확인용 (개발 끝나면 지워도 됨)
+      markers: false // 🔍 확인용 (개발 끝나면 지워도 됨)
+
     });
   }
 
@@ -151,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
         video4.pause();
         video4.currentTime = 0;
       },
-      markers: true // 🔍 확인용 (개발 끝나면 지워도 됨)
+      markers: false // 🔍 확인용 (개발 끝나면 지워도 됨)
     });
   }
   
