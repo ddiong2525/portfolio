@@ -101,6 +101,12 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.custom_cursor').removeClass('yellow');
   })
 
+  $('.iw1').hover(function () {
+    $('.custom_cursor').addClass('blue');
+  }, function () {
+    $('.custom_cursor').removeClass('blue');
+  })
+
   $('.black').hover(function () {
     $('.custom_cursor').addClass('blue');
   }, function () {
