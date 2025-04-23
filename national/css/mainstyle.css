@@ -1,0 +1,1127 @@
+@charset "utf-8";
+
+.main_visual {
+    width: 100%;
+    height: 878px;
+    position: relative;
+    overflow: hidden;
+}
+
+.main_visual .left {
+    width: 1px;
+    height: 90%;
+    position: absolute;
+    z-index: 100;
+    background: var(--main-yellow-color);
+    margin: 45px 0;
+    left: 40px;
+    /* animation: leftAni 1s infinite; */
+}
+
+@keyframes leftAni {
+    0%{height: 0;}
+    100%{height: 90%;}
+}
+
+.main_visual .right {
+    width: 1px;
+    height: 90%;
+    position: absolute;
+    z-index: 100;
+    background: var(--main-yellow-color);
+    margin: 45px 0;
+    right: 40px;
+    /* animation: rightAni 1s 2s infinite; */
+}
+
+@keyframes rightAni {
+    0%{height: 0;}
+    100%{height: 90%;}
+}
+
+.main_visual .top {
+    width: 93%;
+    height: 1px;
+    position: absolute;
+    z-index: 100;
+    background: var(--main-yellow-color);
+    margin: 0 70px;
+    top: 23px;
+    /* animation: topAni 1s 3s infinite; */
+}
+
+@keyframes topAni {
+    0%{width: 0;}
+    100%{width: 93%;}
+}
+
+.main_visual .bottom {
+    width: 93%;
+    height: 1px;
+    position: absolute;
+    z-index: 100;
+    background: var(--main-yellow-color);
+    margin: 0 70px;
+    bottom: 23px;
+    /* animation: bottomAni 1s 1s infinite; */
+}
+
+@keyframes bottomAni {
+    0%{width: 0;}
+    100%{width: 93%;}
+}
+
+.main_visual ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.main_visual ul li .button {
+    width: 195px;
+    height: 49px;
+    position: absolute;
+    left: 236px;
+    bottom: 185px;
+    border: 1px solid var(--main-yellow-color);
+    display: flex;
+
+}
+
+.main_visual ul li .button>a {
+    display: flex;
+    color: var(--main-yellow-color);
+    font-size: 24px;
+    gap: 20px; 
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-family: var(--Notosans);
+}
+
+.main_visual ul li .contents {
+    position: absolute;
+    left: 236px;
+    top: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 130px;
+    color: #f5f4e1;
+}
+
+.main_visual ul li .contents>.tit {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 15px 0px;
+    justify-content: center;
+    gap: 20px;
+    border-top: 2px solid var(--main-yellow-color);
+    border-bottom: 2px solid var(--main-yellow-color);
+    font-family: var(--Notosans);
+    font-size: 72px;
+}
+
+.main_visual ul li .contents>.tit>p {
+    font-weight: 200;
+}
+
+.main_visual ul li .contents>.tit>span {
+    font-weight: 500;
+}
+
+.main_visual ul li .contents i {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+/* 불릿 디자인 변경 */
+.main_visual .swiper-horizontal>.swiper-pagination-bullets,
+.main_visual .swiper-pagination-bullets.swiper-pagination-horizontal,
+.main_visual .swiper-pagination-custom,
+.main_visual .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 38px);
+    /* 마진바텀값 */
+}
+
+.main_visual .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);/* 동그라미 사이사이의 너비 */
+}
+.main_visual .swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 7px));
+    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 7px));
+    background: var(--main-font-color);
+    opacity: .5;
+    /* 불릿 사이즈의 색상과 서클 사이즈! 오퍼시티를 없애고 싶어도 1로 설정해야지 아예 지우면 서버에 설정된 오퍼시티 값이 그대로 결정된다 */
+}
+.main_visual .swiper-pagination-bullet-active {
+    opacity: .8;
+    background: var(--main-yellow-color);
+    /* active 상태에서의 색상 */
+}
+
+/* autoplay */
+.main_visual .autoplay-progress {
+    position: absolute;
+    right: 50px;
+    top: 33px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+  }
+
+  .main_visual .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 2px;
+    stroke: var(--main-yellow-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+
+/* national */
+.national .inner {
+    margin-top: 180px;
+    margin-bottom: 180px;
+}
+
+.national .inner .tit {
+    display: flex;
+    width: 100%;
+    height: 72px;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 10px solid var(--main-yellow-color);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.national .inner .tit h2 {
+    padding-left: 20px;
+}
+
+.national .inner .tit .more {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.national .inner .contents {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.national .inner .contents .top {
+    width: 100%;
+    height: 563px;
+    position: relative;
+}
+
+.national .inner .contents .top p {
+    position: absolute;
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.80);
+    left: 100px;
+    bottom: 192px;
+    font-family: var(--Notosans);
+    font-weight: 300;
+}
+
+.national .inner .contents .top span {
+    position: absolute;
+    font-size: 70px;
+    color: rgba(255, 255, 255, 0.80);
+    left: 100px;
+    bottom: 111px;
+    font-family: var(--Notosans);
+    font-weight: 400;
+}
+
+.national .inner .contents .bottom {
+    width: 100%;
+    height: 315px;
+}
+
+.national .inner .contents .bottom ul.imgs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.national .inner .contents .bottom ul.imgs li {
+    width: 495px;
+    height: 299px;
+}
+.national .inner .contents .bottom ul.imgs li a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.national .inner .contents .bottom ul.imgs li:nth-child(1) a:after {
+    content: '';
+    border: 2px solid var(--main-yellow-color);
+    width: 489px;
+    height: 248px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    transition: .6s;
+    transform: scale(0);
+}
+
+.national .inner .contents .bottom ul.imgs li:nth-child(1) a:hover:after {
+    transform: scale(1);
+}
+
+
+.national .inner .contents .bottom ul.imgs li:nth-child(2) a:after {
+    content: '';
+    border: 2px solid var(--main-yellow-color);
+    width: 489px;
+    height: 248px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    transition: .6s;
+    transform: scale(0);
+}
+
+.national .inner .contents .bottom ul.imgs li:nth-child(2) a:hover:after {
+    transform: scale(1);
+    animation: hoverAni .5s;
+}
+
+@keyframes hoverAni {
+    0%{opacity: 0;}
+    20%{opacity: 0;}
+    40%{opacity: 0;}
+    60%{opacity: 0.4;}
+    80%{opacity: 0.8;}
+    100%{opacity: 1;}
+}
+
+.national .inner .contents .bottom ul.imgs li:nth-child(3) a:after {
+    content: '';
+    border: 2px solid var(--main-yellow-color);
+    width: 489px;
+    height: 248px;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    transition: .6s;
+    transform: scale(0);
+}
+
+.national .inner .contents .bottom ul.imgs li:nth-child(3) a:hover:after {
+    transform: scale(1);
+}
+
+/* magazine */
+.magazine {
+    background-image: url(../img/magazines_tit.jpg);
+    width: 100%;
+    height: 477px;
+    font-family: var(--Adamina);
+    color: rgba(255, 255, 255, 0.92);
+    position: relative;
+    cursor: pointer;
+}
+
+.magazine .txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    position: absolute;
+    right: 224px;
+    bottom: 98px;
+}
+
+.magazine .txt span {
+    font-size: 39px;
+}
+
+.magazine .txt p {
+    font-size: 85px;
+}
+
+/* vid_gal */
+.vid_gal{
+    display: flex;
+    margin-top: 180px;
+    margin-bottom: 180px;
+    gap: 70px;
+}
+
+.vid_gal section {
+    width: 50%;
+}
+
+.vid_gal section>.tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 35px;
+    border-left: 10px solid var(--main-yellow-color);
+}
+
+.vid_gal section>.tit h2{
+    padding-left: 20px;
+}
+
+.vid_gal .video ul {
+    display: flex;
+    flex-wrap: wrap;
+    /* 두 개씩 내리려면 어띃게 하는지요.,.-> width값을 바꿔라 */
+}
+
+.vid_gal .video ul li {
+    width: 355px;
+    height: 345px;
+    background: #ccc;
+    font-size: 40px;
+    font-weight: 400;
+    color: #EFEFEF;
+}
+
+.vid_gal .video ul li:nth-child(1) {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.vid_gal .video ul li:nth-child(4) {
+    margin-left: 10px;
+}
+
+.vid_gal .video ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.vid_gal .video ul li a .tit {
+    width: 100%;
+    height: 100px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.vid_gal .video ul li a .tit .txt{
+    gap: 16px;
+    position: absolute;
+    z-index: 150;
+    display: flex;
+    left: 20px;
+    align-self: center;
+}
+
+.vid_gal .video ul li a .tit .bg::after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%; height: 100px;
+    background: linear-gradient(0deg, rgba(255, 219, 0, 0.53) 0%, rgba(255, 219, 0, 0.00) 100%);
+    opacity: 0;
+    left: 0; bottom: -100px;
+    transition: .4s;
+}
+.vid_gal .video ul li:hover a .tit .bg::after {
+    bottom: 0;
+    opacity: 1;
+    /* 밑에서 위로 스르륵 올라오게 하려면 어떻게 하ㄴㅏ요? -> 애프터를 주고 bottom값을 바꿔라~*/
+}
+
+.vid_gal .video ul li:nth-child(3) a .tit {
+    border-radius: 0px 0px 0px 20px;
+}
+
+.vid_gal .video ul li:nth-child(4) a .tit {
+    border-radius: 0px 0px 20px 0px;
+}
+
+.vid_gal .video ul li:nth-child(1) {
+    background: url(../img/video1.jpg);
+    border-radius: 20px 0px 0px 0px;
+}
+
+.vid_gal .video ul li:nth-child(2) {
+    background: url(../img/video2.jpg);
+    border-radius: 0px 20px 0px 0px;
+}
+
+.vid_gal .video ul li:nth-child(3) {
+    background: url(../img/video3.jpg);
+    border-radius: 0px 0px 0px 20px;
+}
+
+.vid_gal .video ul li:nth-child(4) {
+    background: url(../img/video4.jpg);
+    border-radius: 0px 0px 20px 0px;
+}
+
+.gal .swiper {
+    width: 422px;
+    height: 630px;
+}
+
+.gal .swiper .swiper-slide {
+    border-radius: 20px;
+    background-color: var(--main-yellow-color);
+  }
+
+/* li.swiper-slide.swiper-slide-prev[aria-label="4 / 5"] {
+    background-color: #FF0000;
+}
+
+li.swiper-slide.swiper-slide-next[aria-label="4 / 5"] {
+    background-color: #FF0000;
+} */
+
+/* .gal .swiper .swiper-slide:nth-child(3){
+    background-color: #FF0000
+} 순서대로 색 변화하게 하려다 실패한 모습.. */
+
+.gal .swiper .swiper-slide-active:nth-child(1n) {
+    background: url(../img/gallery1.jpg) no-repeat;
+  }
+
+.gal .swiper .swiper-slide-active:nth-child(2n) {
+    background: url(../img/gallery2.jpg) no-repeat;
+  }
+
+.gal .swiper .swiper-slide-active:nth-child(3n) {
+    background: url(../img/gallery4.jpg) no-repeat;
+  }
+
+.gal .swiper .swiper-slide-active:nth-child(4n) {
+    background: url(../img/gallery3.jpg) no-repeat;
+  }
+
+.gal .swiper .swiper-slide-active:nth-child(5n) {
+    background: url(../img/gallery5.jpg) no-repeat;
+  }
+
+  /* 갤러리카드가 맨앞에 있지 않으면 노란색으로 그라데이션처럼 쭈루룩 있었으면 좋겠는데 그 설정을 어떻게 해야할지 모르겠습니다.. */
+
+  /* 
+  .swiper-slide->
+  .swiper-slide-active-> 활성화 됐을 때 보이는 모습 */
+
+.gal .swiper .swiper-slide a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+    padding-left: 29px;
+    padding-bottom: 80px;
+    color: rgba(255, 255, 255, 0.96);
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.24);
+}
+
+.gal .swiper .swiper-slide a p {
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.gal .swiper .swiper-slide a span {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.gal .swiper .swiper-slide:nth-child(2) a p {
+    font-size: 32px;
+}
+
+.gal .swiper .swiper-slide:nth-child(3) a p {
+    font-size: 55px;
+    font-weight: 400;
+}
+
+.gal .swiper .swiper-slide:nth-child(3) a span {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.gal .swiper .swiper-slide:nth-child(5) a span {
+    font-size: 50px;
+}
+
+
+/* travel */
+.travel .tit {
+    border-left: 10px solid var(--main-yellow-color);
+    margin-bottom: 35px;
+}
+
+.travel .tit h2 {
+    padding-left: 20px;
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.travel {
+    background: url(../img/mazine_travel_bgimg.jpg) no-repeat;
+    padding-top: 252px;
+    width: 100%;
+    height: 1533px;
+}
+
+.travel .contents {
+    display: flex;
+    justify-content: space-between;
+}
+
+.travel .contents .left {
+    width: 1005px;
+}
+
+.travel .left ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.travel .left ul li {
+    width: 490px;
+    height: 494px;
+    position: relative;
+}
+
+.travel .left ul li a .hover p {
+    position: absolute;
+    left: 20px;
+    bottom: 29px;
+}
+
+.travel .left ul li:nth-child(2) {
+    background: url(../img/travel2.png);
+}
+
+.travel .left ul li:nth-child(3) {
+    background-image: url(../img/travel3.png);
+}
+
+.travel .left ul li:first-child {
+    width: 1005px;
+    height: 418px;
+    background-image: url(../img/travel1.png);
+}
+
+.travel .left ul li a .hover {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 43px;
+    color: #F2F2F2;
+    font-weight: 400;
+    transition: .6s;
+    line-height: 111%;
+    opacity: 0;
+    transition: .6s;
+}
+
+.travel .left ul li:first-child a .hover p {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.travel .left ul li:hover a .hover{
+    opacity: 1;
+}
+
+.travel .contents .right {
+    width: 485px;
+    height: 937px;
+    background: rgba(0, 0, 0, 0.43);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.travel .contents .right .tit2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 157px;
+}
+
+.travel .contents .right h3 {
+    font-family: var(--Scdream);
+    font-weight: 500;
+    font-size: 37px;
+    color: #FCFCFC;
+}
+
+.travel .contents .right .more2 a{
+    color: #FCFCFC;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-family: var(--Pretendard);
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+}
+
+.travel .contents .right ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 49px;
+}
+
+.travel .contents .right ul li {
+    width: 445px;
+    height: 160px;
+    position: relative;
+}
+
+.travel .contents .right ul li a {
+    display: flex;
+}
+
+.travel .contents .right ul li a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 445px;
+    height: 160px;
+    border: 1px solid var(--main-yellow-color);
+    opacity: 0;
+    transition: .3s;
+}
+
+.travel .contents .right ul li:hover a:after {
+    opacity: 1;
+}
+
+.travel .contents .right ul li a .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    color: #fdfdfd;
+    padding-left: 30px;
+}
+
+.travel .contents .right ul li a .txt span {
+    font-size: 20px;
+    font-family: var(--Pretendard);
+}
+
+.travel .contents .right ul li a .txt p {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.travel .contents .right ul li a img {
+    width: 160px;
+}
+
+/* kids */
+.kids {
+    margin-top: 180px;
+    margin-bottom: 180px;
+}
+
+.kids .tit {
+    display: flex;
+    width: 100%;
+    height: 72px;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 10px solid var(--main-yellow-color);
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.kids .tit h2 {
+    padding-left: 20px;
+}
+
+.kids .tit .more {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 24px;
+}
+
+.kids .tit .more a {
+    font-family: var(--Noonnu);
+}
+
+/* 더 알아보기를 정렬하고 싶어요... */
+
+.kids .contents {
+    display: flex;
+    gap: 22px;
+    color: var(--main-gray-color);
+    font-family: var(--Noonnu);
+}
+
+.kids .contents img {
+    border-radius: 20px;
+}
+
+.kids .contents .left a img {
+    width: 748px;
+    height: 337px;
+}
+
+.kids .contents .left a {
+    width: 748px;
+    height: 512px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.kids .contents .left a:after {
+    content: '';
+    border-bottom: 2px solid var(--main-yellow-color);
+    border-left: 2px solid var(--main-yellow-color);
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: .3s;
+    z-index: 100;
+}
+
+.kids .contents .left:hover a:after {
+    width: 385px;
+    height: 140px;
+}
+
+.kids .contents .left a:before {
+    content: '';
+    border-top: 2px solid var(--main-yellow-color);
+    border-right: 2px solid var(--main-yellow-color);
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    transition: .3s;
+    z-index: 100;
+}
+
+.kids .contents .left:hover a:before {
+    width: 385px;
+    height: 140px;
+}
+
+.kids .contents .left a .yellow {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    margin-left: 25px;
+    width: 133px;
+    height: 46px;
+    background: var(--main-yellow-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--GT);
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--w-color);
+    font-size: 25px;
+    text-shadow: 0px 2px 4px #DFC000;
+}
+
+.kids .contents .left a p {
+
+    font-size: 40px;
+    margin-left: 30px;
+}
+
+.kids .contents .right img {
+    width: 362px;
+    height: 165px;
+}
+
+.kids .contents .right ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.kids .contents .right ul li a {
+    width: 362px;
+    height: 235px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    font-size: 20px;
+    position: relative;
+}
+
+.kids .contents .right ul li a:after {
+    content: '';
+    border-top: 2px solid var(--main-yellow-color);
+    border-left: 2px solid var(--main-yellow-color);
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    transition: .3s;
+    z-index: 100;
+}
+
+.kids .contents .right ul li:hover a:after {
+    width: 126px;
+    height: 47px;
+}
+
+.kids .contents .right ul li a:before {
+    content: '';
+    border-bottom: 2px solid var(--main-yellow-color);
+    border-right: 2px solid var(--main-yellow-color);
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: .3s;
+    z-index: 100;
+}
+
+.kids .contents .right ul li:hover a:before {
+    width: 126px;
+    height: 47px;
+}
+
+/* store */
+.store {
+    margin-top: 180px;
+    margin-bottom: 180px
+}
+
+.store .tit {
+    border-left: 10px solid var(--main-yellow-color);
+    margin-bottom: 35px;
+}
+
+.store .tit h2 {
+    padding-left: 20px;
+}
+
+.store .swiper {
+    padding: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.store .swiper-slide {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(50%);
+    position: relative;
+    overflow: visible; 
+  }
+  
+ .store .swiper-slide-next {
+    position: relative;
+    z-index: 9;
+ }
+.store .swiper-slide img {
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+.store .swiper-slide-active {
+    filter: grayscale(0%);
+    z-index: 10;
+/*     position: relative; */
+    transition: 0.6s;
+  }
+
+  .store .swiper-slide-active a {
+    width: 840px;
+    height: 480px;
+    position: relative;
+  }
+  
+.store .swiper-slide-active img {
+    transform: scale(1.2);
+  }
+
+.store .swiper .swiper-slide .txt {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.store .swiper .swiper-slide-active a .txt {
+    position: absolute;
+    left: 0;
+    top: 50% ;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.store .swiper .txt ul {
+    display: flex;
+    font-family: 'Namsanm';
+    color: var(--w-color);
+   font-size: 23px; 
+    gap: 10px;
+}
+
+.store .swiper-slide-active .txt ul {
+    display: flex;
+    font-family: 'Namsanm';
+    color: var(--w-color);
+    font-size: 30px;
+}
+
+.store .swiper .txt ul li {
+    padding-right: 10px;
+    border-right: 2px solid var(--main-yellow-color);
+}
+
+.store .swiper>ul>li a .txt ul li:last-child {
+    border-right: 0;
+}
+
+.store .swiper .txt h3 {
+    font-size: 48px;
+    color: var(--w-color);
+    text-shadow: 0px 4px 5px rgba(57, 37, 110, 0.35);
+    font-family: var(--Pretendard);
+    font-weight: 700;
+}
+
+.store .swiper-slide-active .txt h3 {
+    font-size: 56px;
+    color: var(--w-color);
+    text-shadow: 0px 4px 5px rgba(57, 37, 110, 0.35);
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 8px;
+}
+
+.store .swiper>ul>li a .txt h4 {
+    font-size: 25px;
+    color: var(--w-color);
+    margin-top: 10px;
+    font-weight: 300;
+    text-shadow: 0px 4px 5px rgba(57, 37, 110, 0.35);
+}
+
+.store .swiper>ul>li:nth-child(2) a .txt h4 {
+    font-size: 25px;
+}
+
+.store .swiper>ul>li a .txt h4 span {
+    color: var(--main-yellow-color);
+}
+
+.store .swiper>ul>li a .txt p {
+    font-family: var(--Pretendard);
+    font-weight: 400;
+    margin-top: 7px;
+    font-size: 18px;
+}
+
+
+
+.store .swiper-slide-active a:after {
+    content: '';
+    border: 2px solid var(--main-yellow-color);
+    width: 840px;
+    height: 480px;
+    position: absolute;
+    left: -60px;
+    top: -28px;
+    transition: .3s;
+    z-index: 100;
+    transform: scale(0);
+    transition-delay: 0.1s;
+}
+
+.store .swiper-slide-active a:before {
+    content: '';
+    border: 2px solid var(--main-yellow-color);
+    width: 840px;
+    height: 480px;
+    position: absolute;
+    right: -60px;
+    top: -50px;
+    transition: .3s;
+    z-index: 100;
+    transform: scale(0);
+    transition-delay: 0.1s;
+} 
+
+.store .swiper-slide-active a:hover:after {
+    transform: scale(1);
+}
+
+.store .swiper-slide-active a:hover:before {
+    transform: scale(1);
+
+}
+
+.store_next img {
+    width: 70px;
+    cursor: pointer;
+    position: absolute;
+    right: 350px;
+    top: 40%;
+    z-index: 100;
+}
+
+.store_prev img {
+    width: 70px;
+    cursor: pointer;
+    position: absolute;
+    left: 350px;
+    top: 40%;
+    z-index: 100;
+}
