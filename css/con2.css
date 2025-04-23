@@ -32,7 +32,7 @@
 #con2 .articles article .article_inner {
   height: 100%;
   width: 98%;
-  background: #fff;
+  background: url(../img/bgbg.jpg);
   border-right: 1px solid #000;
   border-left: 1px solid #000;
   font-family: var(--SB_B);
@@ -117,7 +117,7 @@
 #con2 .articles article .article_inner .bottom .bt_left .left_bt div {
   width: 168px;
   height: 54px;
-  border-radius: 10px;
+  border-radius: 0px 16px;
   background: #000;
   color: #fff;
   display: flex;
@@ -271,7 +271,7 @@
 }
 
 #con2 .articles article.dark-mode-active .article_inner {
-  background-color: #000;
+  background: url(../img/bgbg_d.jpg);
   color: #fff;
   transition: background-color 0.6s ease, color 0.6s ease;
 }

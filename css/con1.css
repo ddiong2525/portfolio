@@ -272,6 +272,12 @@ section {
 }
 
 .iw5 .box .iw5_contents .Photograph {
+  position: absolute;
+  width: 233px;
+  height: 101px;
+  border-radius: 5px 180px;
+  overflow: hidden;
+  transform: rotate(-8.63deg);
   right: 0;
   top: 50%;
   transform: translateY(-50%);
@@ -288,13 +294,13 @@ section {
 }
 
 .iw5 .box .iw5_contents .bk {
-  left: 168px;
+  left: 182px;
   top: 23px;
   transform: rotate(12.719deg);
 }
 
 .iw5 .box .iw5_contents .pho {
-  left: 45px;
+  left: 31px;
   top: 200px;
   transform: rotate(-7.244deg);
 }
@@ -306,13 +312,14 @@ section {
 }
 
 .iw5 .box .iw5_contents .col {
-  bottom: 29px;
+  bottom: 35px;
   right: 96px;
   transform: rotate(12.719deg);
 }
 
 .iw5 .box .iw5_contents span {
   color: #fff;
+  text-shadow: 5px 0px 3px rgba(0, 0, 0, 0.25);
 }
 
 .hItem h3 {
